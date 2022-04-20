@@ -1,6 +1,6 @@
 package EjerciciosTema3;
 
-class PrimeraParte {
+class Suma {
 
     public static int sumatres(int a, int b, int c) {
         int resultado;
