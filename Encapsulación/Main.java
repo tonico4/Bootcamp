@@ -2,9 +2,9 @@ package Encapsulación;
 
 class Persona {
 
-    private int edad = 28;
-    private static String nombre = "Toni";
-    private int telefono = 612345678;
+    private int edad;
+    private static String nombre;
+    private int telefono;
 
     public void setEdad(int edad) {
         this.edad = edad;
@@ -32,8 +32,11 @@ class Persona {
     
     public static void main(String[] args) {
         Persona persona = new Persona();
+        persona.setEdad(28);
         System.out.println(persona.getEdad());
+        persona.setNombre("Toni");
         System.out.println(persona.getNombre(nombre));
+        persona.setTelefono(635864029);
         System.out.println(persona.getTelefono());
-    }    
+    }   
 }
