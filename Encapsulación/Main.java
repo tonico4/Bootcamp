@@ -3,7 +3,7 @@ package Encapsulación;
 class Persona {
 
     private int edad;
-    private static String nombre;
+    private String nombre;
     private int telefono;
 
     public void setEdad(int edad) {
@@ -15,10 +15,10 @@ class Persona {
     }
 
     public void setNombre(String nombre) {
-        Persona.nombre = nombre;
+        this.nombre = nombre;
     }
 
-    public String getNombre(String string) {
+    public String getNombre() {
         return nombre;
     }
 
@@ -29,14 +29,16 @@ class Persona {
     public int getTelefono() {
         return telefono;
     }
+}    
     
+class Main {    
     public static void main(String[] args) {
         Persona persona = new Persona();
         persona.setEdad(28);
         System.out.println(persona.getEdad());
         persona.setNombre("Toni");
-        System.out.println(persona.getNombre(nombre));
+        System.out.println(persona.getNombre());
         persona.setTelefono(635864029);
         System.out.println(persona.getTelefono());
-    }   
-}
+    }  
+}     
