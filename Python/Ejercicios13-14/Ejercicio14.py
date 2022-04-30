@@ -5,6 +5,6 @@ class Alumno:
 
 alumno = Alumno()
 if alumno.nota >= 5:
-    print(alumno.nombre, 'ha aprobado')
+    print(alumno.nombre, 'ha aprobado con un', alumno.nota)
 else:
-    print(alumno.nombre, 'ha suspendido')
+    print(alumno.nombre, 'ha suspendido con un', alumno.nota)
