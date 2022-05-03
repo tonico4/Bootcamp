@@ -1,0 +1,3 @@
+He creado un fichero tipo texto y he escrito esta lï¿½nea
+Esta es la segunda lï¿½nea
+Añado una línea nueva con a y ejecuto el programa
