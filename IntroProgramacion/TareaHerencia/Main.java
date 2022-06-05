@@ -1,4 +1,4 @@
-package TareaHerencia;
+package IntroProgramacion.TareaHerencia;
 
 public class Main{
     public static void main(String[] args) {

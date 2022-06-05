@@ -1,4 +1,4 @@
-package EstructurasDeControl;
+package IntroProgramacion.EstructurasDeControl;
 
 class EstructurasDeControl {
     public static void main(String[] args) {

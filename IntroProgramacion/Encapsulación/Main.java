@@ -1,4 +1,4 @@
-package Encapsulación;
+package IntroProgramacion.Encapsulación;
 
 class Persona {
 

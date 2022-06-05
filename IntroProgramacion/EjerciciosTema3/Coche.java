@@ -1,4 +1,4 @@
-package EjerciciosTema3;
+package IntroProgramacion.EjerciciosTema3;
 
 public class Coche {
     int puertas = 3; //Puertas actuales

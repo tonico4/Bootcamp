@@ -18,7 +18,7 @@ class Aplicacion(ttk.Frame):
         self.listbox.insert(0, *items)
         print(self.listbox)
 
-        label = Label(text='Lista de países', color='red')
+        label = Label(text='Lista de países')
         label.pack()
 
         self.pack()
