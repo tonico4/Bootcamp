@@ -1,0 +1,7 @@
+.btn-modern:hover {
+    translate: 0px -5px;
+    box-shadow: 1px solid black;
+    background-color: aqua;
+    color: royalblue;
+    transition: all 0.4s;
+}
