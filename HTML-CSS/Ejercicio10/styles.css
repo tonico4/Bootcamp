@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    font-size: 2rem;
+}
+
+.lateral {
+    background-color: #CBFF4D;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.principal {
+    background-color: #6BAA75;
+    flex-grow: 1;
+}
+
+div.lateral span {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+@media (max-width: 640px) {
+    body {
+        flex-direction: column-reverse;
+    }
+
+    .lateral {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
