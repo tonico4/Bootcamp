@@ -1,0 +1,14 @@
+{
+  "name": "ejercicio01",
+  "version": "1.0.0",
+  "description": "Primer ejercicio del curso de Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "firstproject"
+  ],
+  "author": "Antonio García",
+  "license": "ISC"
+}
