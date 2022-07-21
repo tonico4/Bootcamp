@@ -1,4 +1,4 @@
-package Tema5;
+package Java.Tema5.src;
 
 public class Main {
 

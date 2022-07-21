@@ -1,3 +1,5 @@
+package Java.Tema10.src;
+
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
