@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+#separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+}
+
+div {
+    width: 50vw;
+    height: 100vh;
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-left {
+    background-color: darkgray;
+}
+
+#div-right {
+    background-color: beige;
+}
+
+table {
+    height: 600px;
+    width: 400px;
+}
+
+table tr td{
+    border: 2px solid purple;
+    justify-content: center;
+    text-align: center;
+  }
