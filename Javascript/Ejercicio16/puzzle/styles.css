@@ -38,9 +38,9 @@ h1 {
 }
 
 .check-table {
-    height: 80%;
-    width: 60%;
-    border-spacing: 5px;
+    height: 634px;
+    width: 393px;
+    border-spacing: 15px;
 }
 
 .check-table tr td {
@@ -62,7 +62,6 @@ img {
 
 /* Derecha */
 #contenedor-de {
-    background-color: beige;
     display: flex;
     width: 44vw;
     justify-content: center;
@@ -73,4 +72,17 @@ img {
     width: 90%;
     height: 90%;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listado-pzs {
+    height: 634px;
+    width: 393px;
+    border-spacing: 5px;
+}
+
+.listado-pzs tr td {
+    border: 1px solid black;
 }
