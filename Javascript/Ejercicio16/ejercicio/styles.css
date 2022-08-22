@@ -8,3 +8,12 @@
     background-color: white;
     padding: 1rem;
 }
+
+.papelera {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border: 1px dashed black;    
+}
