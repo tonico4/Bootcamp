@@ -1,8 +1,5 @@
 package com.obspring.ejercicios456;
 
-
-
-
 import javax.persistence.*;
 
 @Entity
@@ -14,17 +11,17 @@ public class Laptop {
     private Long id;
     private String brand;
     private String model;
-    private Integer year;
+    private Integer yearbuild;
     private String core;
 
     public Laptop() {
     }
 
-    public Laptop(Long id, String brand, String model, Integer year, String core) {
+    public Laptop(Long id, String brand, String model, Integer yearbuild, String core) {
         this.id = id;
         this.brand = brand;
         this.model = model;
-        this.year = year;
+        this.yearbuild = yearbuild;
         this.core = core;
     }
 
@@ -52,12 +49,12 @@ public class Laptop {
         this.model = model;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getYearbuild() {
+        return yearbuild;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setYearbuild(Integer yearbuild) {
+        this.yearbuild = yearbuild;
     }
 
     public String getCore() {
@@ -74,7 +71,7 @@ public class Laptop {
                 "id=" + id +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", year=" + year +
+                ", year=" + yearbuild +
                 ", core='" + core + '\'' +
                 '}';
     }
