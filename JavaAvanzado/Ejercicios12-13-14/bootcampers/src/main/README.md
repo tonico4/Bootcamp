@@ -1,0 +1,1 @@
+He añadido la clase teacher usando el patrón singleton ya que solo quiero que haya un profesor y he refactorizado con una expresión ternaria dentro del getInstance() del singleton.
