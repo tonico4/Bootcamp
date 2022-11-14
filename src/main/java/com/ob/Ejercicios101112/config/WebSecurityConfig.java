@@ -17,6 +17,6 @@ public class WebSecurityConfig {
         UserDetails user1 = User.withDefaultPasswordEncoder().username("Jose").password("1234").roles("USER").build();
         UserDetails user2 = User.withDefaultPasswordEncoder().username("Luis").password("4567").roles("USER").build();
 
-        return new InMemoryUserDetailsManager(user1, user2);
+        return new InMemoryUserDetailsManager(user1, user2);a
     }
 }
