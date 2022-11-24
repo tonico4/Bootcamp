@@ -2,9 +2,11 @@ package com.bootcamp.ejercicios252627.services;
 
 import com.bootcamp.ejercicios252627.entities.Car;
 import com.bootcamp.ejercicios252627.repositories.CarDBMemory;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class CarService {
     CarDBMemory carDBMemory = new CarDBMemory();
 
@@ -21,7 +23,10 @@ public class CarService {
 
     public Car searchModelCar(String model) {
         Car car = new Car();
+        car.brand = car.brand;
         car.model = model;
+        car.numDoors = car.numDoors;
+        car.motorType = car.motorType;
 
         return carDBMemory.searchCarByModel(car);
     }
