@@ -5,8 +5,8 @@ const Clock = () => {
     const datosIniciales = {
         fecha: new Date(),
         edad: 0,
-        nombre: 'Martín',
-        apellidos: 'San José'
+        nombre: 'Toni',
+        apellidos: 'García'
     };
 
     const [datos, setDatos] = useState(datosIniciales);
