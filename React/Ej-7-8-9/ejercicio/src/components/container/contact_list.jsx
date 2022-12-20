@@ -43,19 +43,11 @@ const ContactList = () => {
         setContacts(tempContacts);
     }
 
-    /**
-     * Esta función muestra todos los datos de un contacto.
-     * @param {*} contact 
-     */
-    function showDetails() {
-        // TODO: Hacer que muestre todos los datos del contacto
-    }
-
     return (
         <div className='border border-info rounded-4 px-5 py-5 d-grid gap-4 w-25'>
             <header className='d-flex justify-content-between align-items-center'>
                 <h1 className='text-start fw-bold border-bottom border-primary fs-3'>Contacts</h1>
-                <button onClick={newContact} className='btn btn-lg btn--outline-dark fs-6'>
+                <button className='btn btn-lg btn--outline-dark fs-6'>
                     <i class="bi bi-plus-circle-fill" style={{color: 'white'}}></i>
                 </button>
             </header>
