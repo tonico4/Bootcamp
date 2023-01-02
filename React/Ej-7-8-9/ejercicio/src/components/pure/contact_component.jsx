@@ -3,46 +3,41 @@ import PropTypes from 'prop-types';
 import { Contact } from '../../models/contact';
 
 
-const ContactComponent = ( {contact} ) => {
+const ContactComponent = ( {contact, remove, toggle} ) => {
 
-    const details = document.getElementById('contactDetails');
-
+    /**
+     * Iconos
+     */
     const eye = <i style={{color: 'white'}} class="bi bi-eye"></i>
-    const eyeSlash = <i class="bi bi-eye-slash"></i>
+    const eyeSlash = <i style={{color: 'white'}} class="bi bi-eye-slash"></i>
+    const conectIcon = <i className='bi bi-record-fill' style={{color: 'green'}}></i>
+    const disconectIcon = <i className='bi bi-record-fill' style={{color: 'red'}}></i>
 
-    const initialActive = true;
-
-    const [active, setActive] = useState(initialActive);
-
-    function show() {
-        details.classList.add('d-none');
-        setActive(true)
-    }
-
-    function unShow() {
-        details.classList.remove('d-none');
-        setActive(false)
-    }
-
-    function changeShow() {
-
-    }
+    /**
+     * Estado para visualizar los detalles de un contacto
+     */
+    const [hidden, setHidden] = useState(true);
+    const className = hidden ? "d-none" : "";
 
     return (
         <div className='d-grid gap-2 text-start' >
             <div className='d-flex justify-content-between align-items-center'> 
                 <div className='d-flex'>
-                    <h4> {contact.contactName} </h4>
-                    <button onClick={changeShow} className='btn btn--outline-dark'>
+                    <h4> {contact.nickName} </h4>
+                    <button onClick={() => {setHidden(!hidden)}} className='btn btn--outline-dark'>
                         {
-                            //show ? <i class="bi bi-eye"></i> : <i class="bi bi-eye-slash"></i>
-                            eye
+                            hidden ? eye : eyeSlash
                         }
                     </button>
                 </div>
-                <h6 style={{fontSize: '12px'}} >Conected: { contact.conected ? (<i className='bi bi-record-fill' style={{color: 'green'}}></i>) : (<i className='bi bi-record-fill' style={{color: 'red'}}></i>) }</h6>
+                <div className='d-flex justify-content-between align-items-center' style={{width: 100}}>
+                    <h6 onClick={() => toggle(contact)} style={{fontSize: '12px'}}>
+                        Conected: {contact.conected ? conectIcon : disconectIcon}
+                    </h6>
+                    <i onClick={() => {remove(contact)}} class="bi bi-trash fs-5 text-danger"></i>
+                </div>
             </div>
-            <div id='contactDetails' className='d-none'>
+            <div id='contactDetails' className={className}>
                 <h6>Name: {contact.name}</h6>
                 <h6>Second name: {contact.secondName}</h6>
                 <h6>Phone: {contact.phone}</h6>
@@ -54,7 +49,9 @@ const ContactComponent = ( {contact} ) => {
 
 
 ContactComponent.propTypes = {
-    contact: PropTypes.instanceOf(Contact)
+    contact: PropTypes.instanceOf(Contact),
+    remove: PropTypes.func.isRequired,
+    toggle: PropTypes.func.isRequired,
 };
 
 
