@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 const SquareComponent = () => {
 
@@ -29,15 +29,6 @@ const SquareComponent = () => {
     function backStyles() {
         setStyles(intialStyles);
     }
-
-    
-
-    useEffect(() => {
-        const intervalId = setInterval(updateBackground(), 1000)
-        return () => {
-            
-        };
-    }, []);
 
     return (
         <div onMouseEnter={updateBackground} onMouseLeave={backStyles} onDoubleClick={backStyles} style={styles}>
