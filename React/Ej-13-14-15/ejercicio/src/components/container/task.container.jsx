@@ -1,8 +1,8 @@
 import React from 'react';
 import TableTasks from './table.tasks';
-import TasksForm from './tasks.form';
 
 const TaskContainer = () => {
+
     return (
         <div className='col-8'>
             <div className='card'>
@@ -13,7 +13,6 @@ const TaskContainer = () => {
                     <TableTasks></TableTasks>
                 </div>
             </div>
-            <TasksForm></TasksForm>
         </div>
     );
 }

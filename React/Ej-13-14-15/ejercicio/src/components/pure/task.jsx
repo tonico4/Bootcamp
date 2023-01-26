@@ -64,7 +64,7 @@ const TaskComponent = ( {task, complete, remove} ) => {
                 { isCompleted() }
                 <i className='bi-trash'
                     style={{color: 'red'}}
-                    onClick={remove}
+                    onClick={() => remove(task)}
                 >
                 </i>
             </td>

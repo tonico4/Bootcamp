@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
+import TasksForm from './tasks.form';
 
 const TableTasks = () => {
 
@@ -24,28 +25,37 @@ const TableTasks = () => {
         setTasks(tempTasks);
     }
 
+    function addTask(task) {
+        const tempTasks = [...tasks];
+        tempTasks.push(task);
+        setTasks(tempTasks);
+    }
+
     return (
-        <table className='table'>
-            <thead className='fs-3'>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Level</th>
-                <th>Completed</th>
-            </thead>
-            <tbody className='table-group-divider'>
-                {tasks.map((task, index) => {
-                    return (
-                        <TaskComponent
-                            key={index}
-                            task={task}
-                            complete={completeTask}
-                            remove={deleteTask}
-                        >
-                        </TaskComponent>
-                    )
-                })}
-            </tbody>
-        </table>
+        <div>
+            <table className='table'>
+                <thead className='fs-3'>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Level</th>
+                    <th>Completed</th>
+                </thead>
+                <tbody className='table-group-divider'>
+                    {tasks.map((task, index) => {
+                        return (
+                            <TaskComponent
+                                key={index}
+                                task={task}
+                                complete={completeTask}
+                                remove={deleteTask}
+                            >
+                            </TaskComponent>
+                        )
+                    })}
+                </tbody>
+            </table>
+            <TasksForm add={addTask}></TasksForm>
+        </div>
     );
 };
 
