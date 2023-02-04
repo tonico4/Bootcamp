@@ -1,0 +1,32 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffbb00;
+}
+
+.link:hover {
+    color: #ffbb00;
+    text-decoration: underline;
+    background-color: rgba(248, 211, 2, 0.301);
+    box-shadow: -1px 1px 217px 83px rgba(248,211,2,0.57);
+    -webkit-box-shadow: -1px 1px 217px 83px rgba(248,211,2,0.57);
+    -moz-box-shadow: -1px 1px 217px 83px rgba(248,211,2,0.57);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.btn-home-div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}

@@ -32,7 +32,6 @@ const Login = () => {
                     // We save the data in the localstorage
                     await localStorage.setItem('credentials', values);
                 }}
-
             >
                 <Form>
                     <label htmlFor="email">Email</label>
