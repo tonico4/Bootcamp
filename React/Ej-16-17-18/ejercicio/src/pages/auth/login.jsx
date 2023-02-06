@@ -38,37 +38,36 @@ const Login = () => {
                 {({
                     values, touched, errors, handleChange, handleBlur
                 }) => (
-                    <Form className='form'>
-                        <div className='email'>
-                            <label htmlFor="email">Email:</label>
-                            <Field id="email" type="email" name="email" placeholder="example@email.com" />
-                            {
-                                errors.email && touched.email && 
-                                (
-                                    <ErrorMessage name="email" component='div'></ErrorMessage>
-                                )
-                            }
-
-                        </div>
-                        <div className='password'>
-                            <label htmlFor="password">Password:</label>
-                            <Field
-                                id="password"
-                                name="password"
-                                placeholder="Create a password"
-                                type='password'
-                            />
-                            {
-                                errors.password && touched.password && 
-                                (
-                                    <ErrorMessage name="password" component='div'></ErrorMessage>
-                                )
-                            }
-
-                        </div>
-                        <button className='login-btn' type='submit'>Login</button>
-                    </Form>
-                )}
+                        <Form className='form'>
+                            <div className='email'>
+                                <label htmlFor="email">Email:</label>
+                                <Field id="email" type="email" name="email" placeholder="example@email.com" />
+                                {
+                                    errors.email && touched.email && 
+                                    (
+                                        <ErrorMessage name="email" component='div'></ErrorMessage>
+                                    )
+                                }
+                            </div>
+                            <div className='password'>
+                                <label htmlFor="password">Password:</label>
+                                <Field
+                                    id="password"
+                                    name="password"
+                                    placeholder="Create a password"
+                                    type='password'
+                                />
+                                {
+                                    errors.password && touched.password && 
+                                    (
+                                        <ErrorMessage name="password" component='div'></ErrorMessage>
+                                    )
+                                }
+                            </div>
+                            <button className='login-btn' type='submit'>Login</button>
+                        </Form>
+                    )
+                }
             </Formik>
         </div>
     );

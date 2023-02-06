@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import { Formik, Field, Form } from 'formik';
+import React from 'react';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { User } from '../../models/user';
 import './register.css';
@@ -41,7 +40,8 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className='register-div'>
+            <h2 className='register-text'>Create your account</h2>
             <Formik
                 initialValues={initialValues}
                 validationSchema={registerSchema}
@@ -50,44 +50,69 @@ const Register = () => {
                     alert(JSON.stringify(values, null, 2));
                 }}
             >
-                <Form className='form'>
-                    <div className='username'>
-                        <label htmlFor="username">Username</label>
-                        <Field id="username" type="text" name="username" placeholder="Write your username"></Field>
-                    </div>
-                    <div className='email'>
-                        <label htmlFor="email">Email</label>
-                        <Field id="email" type="email" name="email" placeholder="example@email.com" />
-                    </div>
-                    <div className='password'>
-                        <label htmlFor="password">Password</label>
-                        <Field
-                            id="password"
-                            name="password"
-                            placeholder="password"
-                            type='password'
-                        />
-                    </div>
-                    <div className='confirm'>
-                        <label htmlFor="confirm">Password</label>
-                        <Field
-                            id="confirm"
-                            name="confirm"
-                            placeholder="confirm passsword"
-                            type='password'
-                        />
-                    </div>
-                    <button className='signin-btn' type='submit'>Sign In</button>
-                </Form>
+            {({
+                values, touched, errors, handleChange, handleBlur
+            }) => (
+                    <Form className='form'>
+                        <div className='username'>
+                            <label htmlFor="username">Username</label>
+                            <Field id="username" type="text" name="username" placeholder="Write your username"></Field>
+                            {
+                                errors.username && touched.username && 
+                                (
+                                    <ErrorMessage name="username" component='div'></ErrorMessage>
+                                )
+                            }
+                        </div>
+                        <div className='email'>
+                            <label htmlFor="email">Email</label>
+                            <Field id="email" type="email" name="email" placeholder="example@email.com" />
+                            {
+                                errors.email && touched.email && 
+                                (
+                                    <ErrorMessage name="email" component='div'></ErrorMessage>
+                                )
+                            }
+                        </div>
+                        <div className='password'>
+                            <label htmlFor="password">Password</label>
+                            <Field
+                                id="password"
+                                name="password"
+                                placeholder="password"
+                                type='password'
+                            />
+                            {
+                                errors.password && touched.password && 
+                                (
+                                    <ErrorMessage name="password" component='div'></ErrorMessage>
+                                )
+                            }
+
+                        </div>
+                        <div className='confirm'>
+                            <label htmlFor="confirm">Password</label>
+                            <Field
+                                id="confirm"
+                                name="confirm"
+                                placeholder="confirm password"
+                                type='password'
+                            />
+                            {
+                                errors.confirm && touched.confirm && 
+                                (
+                                    <ErrorMessage name="confirm" component='div'></ErrorMessage>
+                                )
+                            }
+
+                        </div>
+                        <button className='signin-btn' type='submit'>Sign In</button>
+                    </Form>
+                )
+            }
             </Formik>
         </div>
     );
 };
-
-
-Register.propTypes = {
-
-};
-
 
 export default Register;

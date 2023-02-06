@@ -3,13 +3,11 @@ export class User {
     email = '';
     password = '';
     confirm = '';
-    logged = false
 
-    constructor(username, email, password, confirm, logged) {
+    constructor(username, email, password, confirm) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.confirm = confirm;
-        this.logged = logged;
     }
 }
