@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Yup from 'yup';
 import { Form, Formik, Field } from 'formik';
+import './login.css';
 
 
 const Login = () => {
@@ -22,7 +23,8 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className='login-div'>
+            <h2 className='login-text'>Login</h2>
             <Formik
                 initialValues={credentials}
                 validationSchema={logingSchema}
@@ -33,17 +35,21 @@ const Login = () => {
                     await localStorage.setItem('credentials', values);
                 }}
             >
-                <Form>
-                    <label htmlFor="email">Email</label>
-                    <Field id="email" type="email" name="email" placeholder="example@email.com" />
-                    <label htmlFor="password">Password</label>
-                    <Field
-                        id="password"
-                        name="password"
-                        placeholder="password"
-                        type='password'
-                    />
-                    <button type='submit'>Login</button>
+                <Form className='form'>
+                    <div className='email'>
+                        <label htmlFor="email">Email:</label>
+                        <Field id="email" type="email" name="email" placeholder="example@email.com" />
+                    </div>
+                    <div className='password'>
+                        <label htmlFor="password">Password:</label>
+                        <Field
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            type='password'
+                        />
+                    </div>
+                    <button className='login-btn' type='submit'>Login</button>
                 </Form>
             </Formik>
         </div>

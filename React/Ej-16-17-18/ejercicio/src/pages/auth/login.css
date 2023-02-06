@@ -1,0 +1,32 @@
+.login-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-text {
+    font-size: 2em;
+    margin-bottom: 50px;
+    color: rgb(255, 217, 0);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    gap: 15px;
+    text-align: left;
+}
+
+.email, .password {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-btn {
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 20px;
+}

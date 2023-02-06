@@ -8,14 +8,14 @@ import NotFound from '../pages/404/not.found';
 
 const RoutesComponent = () => {
 
-    let logedIn = false;
+    let logedIn = true;
 
     return (
         <Routes>
             <Route path='/' element={<Home />}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path='/register' element={<Register></Register>}></Route>
-            <Route path='/tasklist' element={logedIn ? <TaskContainer></TaskContainer> : <Register></Register>}></Route>
+            <Route path='/tasklist' element={logedIn ? <TaskContainer></TaskContainer> : <Login></Login>}></Route>
             <Route path='/404' element={<NotFound></NotFound>}></Route>
         </Routes>
     );
