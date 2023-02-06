@@ -2,6 +2,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import './login.css';
+import {Link} from 'react-router-dom';
 
 
 const Login = () => {
@@ -69,6 +70,8 @@ const Login = () => {
                     )
                 }
             </Formik>
+            <p>or</p>
+            <Link className='register-btn' to={'/register'}>Register now</Link>
         </div>
     );
 };

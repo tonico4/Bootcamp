@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { User } from '../../models/user';
 import './register.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -106,11 +107,13 @@ const Register = () => {
                             }
 
                         </div>
-                        <button className='signin-btn' type='submit'>Sign In</button>
+                        <button className='register-btn' type='submit'>Register</button>
                     </Form>
                 )
             }
             </Formik>
+            <p>or</p>
+            <Link className='login-btn' to={'/login'}>Login</Link>
         </div>
     );
 };

@@ -25,8 +25,22 @@
     flex-direction: column;
 }
 
-.signin-btn {
+.register-btn {
     width: 150px;
-    margin-top: 20px;
+    margin: 20px 0;
     border-radius: 20px;
+}
+
+.login-btn {
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: black;
+    background-color: #F0F0F0;
+    padding: 10px;
+    margin-top: -1px;
+}
+
+.login-btn:hover {
+    color: black;
 }
