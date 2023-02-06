@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Yup from 'yup';
-import { Form, Formik, Field } from 'formik';
+import { Form, Formik, Field, ErrorMessage } from 'formik';
 import './login.css';
 
 
@@ -35,22 +35,40 @@ const Login = () => {
                     await localStorage.setItem('credentials', values);
                 }}
             >
-                <Form className='form'>
-                    <div className='email'>
-                        <label htmlFor="email">Email:</label>
-                        <Field id="email" type="email" name="email" placeholder="example@email.com" />
-                    </div>
-                    <div className='password'>
-                        <label htmlFor="password">Password:</label>
-                        <Field
-                            id="password"
-                            name="password"
-                            placeholder="Create a password"
-                            type='password'
-                        />
-                    </div>
-                    <button className='login-btn' type='submit'>Login</button>
-                </Form>
+                {({
+                    values, touched, errors, handleChange, handleBlur
+                }) => (
+                    <Form className='form'>
+                        <div className='email'>
+                            <label htmlFor="email">Email:</label>
+                            <Field id="email" type="email" name="email" placeholder="example@email.com" />
+                            {
+                                errors.email && touched.email && 
+                                (
+                                    <ErrorMessage name="email" component='div'></ErrorMessage>
+                                )
+                            }
+
+                        </div>
+                        <div className='password'>
+                            <label htmlFor="password">Password:</label>
+                            <Field
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                type='password'
+                            />
+                            {
+                                errors.password && touched.password && 
+                                (
+                                    <ErrorMessage name="password" component='div'></ErrorMessage>
+                                )
+                            }
+
+                        </div>
+                        <button className='login-btn' type='submit'>Login</button>
+                    </Form>
+                )}
             </Formik>
         </div>
     );
