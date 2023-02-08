@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
 import { getJoke } from '../../services/axiosService';
 import './app.container.css';
 import Voting from '../pure/voting';
-import Generator from '../pure/generator';
 
 
 const AppContainer = () => {
@@ -13,6 +11,7 @@ const AppContainer = () => {
     useEffect(() => {
         obtainJoke();
     }, []);
+
 
     function obtainJoke() {
         getJoke()
@@ -36,17 +35,13 @@ const AppContainer = () => {
                     <Voting></Voting>
                 </row>
                 <row>
-                    <Generator></Generator>
+                    <button className='button' onClick={() => obtainJoke()}>New Joke</button>
                 </row>
             </div>
         </div>
     );
 };
 
-
-AppContainer.propTypes = {
-
-};
 
 
 export default AppContainer;

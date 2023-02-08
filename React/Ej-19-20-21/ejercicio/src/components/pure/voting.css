@@ -8,3 +8,7 @@
     align-items: center;
     font-size: 28px;
 }
+
+i {
+    cursor: pointer;
+}
