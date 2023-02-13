@@ -1,11 +1,12 @@
-import {configureStore} from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
+import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
+import { rootReducer } from "../reducers/rootReducer";
 
-export const appStore = () => {
+export const createAppStore = () => {
     let store = configureStore(
-        {
-            reducer: {
-                
-            }
-        }
+        rootReducer,
+        composeWithDevTools()
     )
+    
+    return store;
 }
