@@ -5,7 +5,7 @@ let nextTodoID = 0;
 
 // Sync action types
 /**
- * Type ADD_TODO
+ * Type ADD_TODOddddddddddddddddddd
  */
 export const ADD_TODO = 'ADD_TODO';
 /**
